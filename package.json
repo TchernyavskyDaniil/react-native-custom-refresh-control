@@ -1,0 +1,32 @@
+{
+  "name": "react-native-refresh-control",
+  "version": "1.0.0",
+  "description": "Refresh your screen with react native custom refresh control",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TchernyavskyDaniil/react-native-refresh-control.git"
+  },
+  "keywords": [
+    "react-native",
+    "refresh-control",
+    "react",
+    "javascript"
+  ],
+  "author": "Daniil Tchernyavsky <tchernyavsky.daniil@yandex.ru> (https://github.com/TchernyavskyDaniil)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TchernyavskyDaniil/react-native-refresh-control/issues"
+  },
+  "homepage": "https://github.com/TchernyavskyDaniil/react-native-refresh-control#readme",
+  "dependencies": {
+    "prop-types": "^15.7.2"
+  },
+  "devDependencies": {
+    "react": "^16.11.0",
+    "react-native": "^0.61.4"
+  }
+}
