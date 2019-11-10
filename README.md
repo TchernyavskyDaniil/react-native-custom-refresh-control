@@ -40,7 +40,7 @@ FlatList
 
 | Prop                     | Type      | Default | Description                                                                                           | Required |
 | ------------------------ | --------- | ------- | ----------------------------------------------------------------------------------------------------- | -------- |
-| **`callbackError`**    | `function`  | `() => {}`  | In case of error setClearedInterval function                                                             | No       |
+| **`callbackError`**    | `function`  | `() => {}`  | In case of error setClearedInterval function with catched error                                                           | No       |
 | **`callback`**      | `function`  | `null`  | Your callback, for example, for data processing during a refresh                                                      | No       |
 | **`callbackParams`**| `any`  | `undefined`    | Any set of parameters when calling prop callback | No       |
 | **`delay`**    | `number`  | `null`  | Set duration of refresh, regardless of prop callback                                                         | No       |
