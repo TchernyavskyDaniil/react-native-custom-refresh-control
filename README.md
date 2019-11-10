@@ -12,7 +12,7 @@ $ npm install --save react-native-refresh-control
 
 `import { CustomRefreshControl } from 'react-native-custom-refresh-control';`
 
-All parameters are optional
+All parameters are optional.
 
 ## Basic Usage
 
