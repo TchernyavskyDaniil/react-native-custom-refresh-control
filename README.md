@@ -5,7 +5,7 @@ This module include custom react native refresh control.
 ## Installation
 
 ```
-$ npm install --save react-native-refresh-control
+$ npm install --save react-native-custom-refresh-control
 ```
 
 ## Usage
