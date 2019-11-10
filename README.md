@@ -1,16 +1,16 @@
-# React Native Custom Refresh Control
+# React Native Customizable Refresh Control
 
-This module include custom react native refresh control.
+This module include customizable react native refresh control.
 
 ## Installation
 
 ```
-$ npm install --save react-native-custom-refresh-control
+$ npm install --save react-native-customizable-refresh-control
 ```
 
 ## Usage
 
-`import { CustomRefreshControl } from 'react-native-custom-refresh-control';`
+`import { CustomizableRefreshControl } from 'react-native-customizable-refresh-control';`
 
 All parameters are optional.
 

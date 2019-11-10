@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { useUnmount } from './useUnmount';
 
-export const CustomRefreshControl = ({
+export const CustomizableRefreshControl = ({
  callbackError,
  callback,
  callbackParams,
