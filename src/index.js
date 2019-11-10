@@ -42,7 +42,7 @@ export const CustomizableRefreshControl = ({
   return <RefreshControl refreshing={refreshing} onRefresh={handleOnRefresh} {...controlParams} />
 };
 
-CustomRefreshControl.defaultProps = {
+CustomizableRefreshControl.defaultProps = {
   callback: null,
   callbackError: () => {},
   callbackParams: undefined,
@@ -51,7 +51,7 @@ CustomRefreshControl.defaultProps = {
   delayCallback: () => {},
 };
 
-CustomRefreshControl.propTypes = {
+CustomizableRefreshControl.propTypes = {
   callback: PropTypes.func,
   callbackError: PropTypes.func,
   callbackParams: PropTypes.oneOfType([
