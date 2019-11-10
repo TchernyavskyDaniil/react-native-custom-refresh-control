@@ -1,4 +1,4 @@
-# React Native Refresh Control
+# React Native Custom Refresh Control
 
 This module include custom react native refresh control.
 
