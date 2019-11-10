@@ -4,39 +4,51 @@ import PropTypes from 'prop-types';
 
 import { useUnmount } from './useUnmount';
 
-export const CustomRefreshControl = ({ callbackError, callback, callbackParams }) => {
+export const CustomRefreshControl = ({
+ callbackError,
+ callback,
+ callbackParams,
+ delay,
+ delayCallback,
+ controlParams,
+}) => {
   const [refreshing, setRefreshing] = useState(false);
 
-  const cancelRefreshing = useCallback(() => setRefreshing(false), []);
-
   const setClearedInterval = useCallback(async () => {
+    if (delay) {
+      setTimeout(delayCallback, delay)
+    }
+
     if (callback) {
       try {
-        await callback(callbackParams);
+        await callback(callbackParams)
       } catch (e) {
-        callbackError(e);
+        callbackError(e)
       }
     }
 
-    cancelRefreshing();
-  }, [callback, callbackError, callbackParams, cancelRefreshing]);
+    cancelRefreshing()
+  }, [callback, callbackError, callbackParams, cancelRefreshing, delay, delayCallback]);
 
   const handleOnRefresh = useCallback(async () => {
     setRefreshing(true);
-    await setClearedInterval();
+    await setClearedInterval()
   }, [setClearedInterval]);
+
+  const cancelRefreshing = useCallback(() => setRefreshing(false), []);
 
   useUnmount(cancelRefreshing);
 
-  return (
-    <RefreshControl refreshing={refreshing} onRefresh={handleOnRefresh} />
-  )
+  return <RefreshControl refreshing={refreshing} onRefresh={handleOnRefresh} {...controlParams} />
 };
 
 CustomRefreshControl.defaultProps = {
   callback: null,
   callbackError: () => {},
   callbackParams: undefined,
+  controlParams: {},
+  delay: null,
+  delayCallback: () => {},
 };
 
 CustomRefreshControl.propTypes = {
@@ -47,4 +59,7 @@ CustomRefreshControl.propTypes = {
     PropTypes.object,
     PropTypes.oneOf([undefined]),
   ]),
+  controlParams: PropTypes.object,
+  delay: PropTypes.number,
+  delayCallback: PropTypes.func,
 };
