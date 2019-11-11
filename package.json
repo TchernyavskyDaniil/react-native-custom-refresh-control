@@ -1,6 +1,6 @@
 {
   "name": "react-native-customizable-refresh-control",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Refresh your screen with react native customizable refresh control",
   "main": "src/index.js",
   "scripts": {
