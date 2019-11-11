@@ -1,5 +1,5 @@
 {
-  "name": "react-native-customizable-refresh-control",
+  "name": "react-native-custom-refresh-control",
   "version": "1.0.4",
   "description": "Refresh your screen with react native customizable refresh control",
   "main": "src/index.js",

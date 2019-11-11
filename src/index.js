@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { useUnmount } from './useUnmount';
 
-export const CustomizableRefreshControl = ({
+export const CustomRefreshControl = ({
  callbackError,
  callback,
  callbackParams,
@@ -44,7 +44,7 @@ export const CustomizableRefreshControl = ({
   return <RefreshControl children={children} style={style} refreshing={refreshing} onRefresh={handleOnRefresh} {...controlParams} />
 };
 
-CustomizableRefreshControl.defaultProps = {
+CustomRefreshControl.defaultProps = {
   callback: null,
   callbackError: () => {},
   callbackParams: undefined,
@@ -53,7 +53,7 @@ CustomizableRefreshControl.defaultProps = {
   delayCallback: () => {},
 };
 
-CustomizableRefreshControl.propTypes = {
+CustomRefreshControl.propTypes = {
   callback: PropTypes.func,
   callbackError: PropTypes.func,
   callbackParams: PropTypes.oneOfType([
