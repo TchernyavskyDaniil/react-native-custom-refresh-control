@@ -12,6 +12,7 @@ export const CustomizableRefreshControl = ({
  delayCallback,
  controlParams,
  style,
+  children
 }) => {
   const [refreshing, setRefreshing] = useState(false);
 
@@ -40,7 +41,7 @@ export const CustomizableRefreshControl = ({
 
   useUnmount(cancelRefreshing);
 
-  return <RefreshControl style={style} refreshing={refreshing} onRefresh={handleOnRefresh} {...controlParams} />
+  return <RefreshControl children={children} style={style} refreshing={refreshing} onRefresh={handleOnRefresh} {...controlParams} />
 };
 
 CustomizableRefreshControl.defaultProps = {
