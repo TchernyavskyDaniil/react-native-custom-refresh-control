@@ -14,6 +14,8 @@ $ npm install --save react-native-customizable-refresh-control
 
 All parameters are optional.
 
+### Prop from React Native: style. https://github.com/facebook/react-native/issues/11784
+
 ## Basic Usage
 
 ScrollView
